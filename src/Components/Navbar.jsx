@@ -14,9 +14,9 @@ export const Navbar = () => {
                         <div className="flex-shrink-0">
                             <Link
                                 to="/"
-                                className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent tracking-tight hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
+                                className="text-3xl font-bold text-indigo-600"
                             >
-                                ✨ My Blog
+                                My Blog
                             </Link>
                         </div>
 

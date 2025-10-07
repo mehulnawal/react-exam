@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router"
 import { Navbar } from "./Components/Navbar"
 import { PostList } from "./Components/PostList"
 import { AddPostForm } from "./AddPost"
+import { Login } from "./Components/Login"
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
-            <Route index element={<PostList />} />
+            <Route path="postList" element={<PostList />} />
+            <Route path="/" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

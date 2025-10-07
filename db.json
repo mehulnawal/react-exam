@@ -64,5 +64,12 @@
       "date": "8484-05-04",
       "image": ""
     }
+  ],
+  "users": [
+    {
+      "id": "e2d0",
+      "email": "m@gmail.com",
+      "password": "12345"
+    }
   ]
 }
