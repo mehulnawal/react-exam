@@ -1,1 +1,68 @@
-{}
+{
+  "postList": [
+    {
+      "title": "Tailwind CSS Tips for Developers",
+      "description": "Explore powerful Tailwind CSS features to create modern, responsive web designs.",
+      "category": "CSS",
+      "date": "2025-10-06",
+      "image": "https://www.example.com/images/tailwind-tips.jpg",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "title": "Building a Chat App with Firebase",
+      "description": "Step-by-step tutorial on creating a real-time chat application using React and Firebase.",
+      "image": "https://www.example.com/images/chat-app.jpg",
+      "category": "FIREBASE",
+      "date": "2025-10-05"
+    },
+    {
+      "id": "4",
+      "title": "Optimizing MERN Stack Performance",
+      "description": "Learn techniques to improve your MERN stack application's speed and scalability.",
+      "image": "https://www.example.com/images/mern-performance.jpg",
+      "category": "MERN",
+      "date": "2025-10-04"
+    },
+    {
+      "id": "5",
+      "title": "Dark Mode Implementation in React",
+      "description": "Discover how to add a theme toggle feature to your React apps using Tailwind CSS and state management.",
+      "image": "https://www.example.com/images/dark-mode.jpg",
+      "category": "REACT UI",
+      "date": "2025-10-03"
+    },
+    {
+      "id": "53be",
+      "title": "test 1",
+      "description": "test  - lkajlasjflj",
+      "category": "REACT",
+      "date": "2025-10-11",
+      "image": ""
+    },
+    {
+      "id": "639f",
+      "title": "salfjk",
+      "description": "lk",
+      "category": "REACT",
+      "date": "2025-10-18",
+      "image": ""
+    },
+    {
+      "id": "7c33",
+      "title": "h",
+      "description": "h",
+      "category": "H",
+      "date": "1000-02-12",
+      "image": ""
+    },
+    {
+      "id": "c660",
+      "title": "lsafj",
+      "description": "lkajlfkj",
+      "category": "FIREBASE",
+      "date": "8484-05-04",
+      "image": ""
+    }
+  ]
+}
