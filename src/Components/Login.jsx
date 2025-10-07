@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export function Login() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { loading, error, success } = useSelector((state) => state.userSlice);
+    const { loading, error, success } = useSelector((state) => state.usersSlice);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,12 +18,11 @@ export function Login() {
 
     useEffect(() => {
         if (success) {
-            setEmail("");
-            setPassword("");
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 dispatch(resetState());
-                navigate("/postList");
-            }, 1000);
+                navigate("/postList", { replace: true });
+            }, 800);
+            return () => clearTimeout(timer);
         }
     }, [success, dispatch, navigate]);
 

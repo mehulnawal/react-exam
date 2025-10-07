@@ -1,4 +1,4 @@
-import { Home, LogOut, PlusSquare } from "lucide-react";
+import { Home, LogIn, LogOut, PlusSquare } from "lucide-react";
 import { Link, NavLink, Outlet } from 'react-router';
 
 // Enhanced Navbar Component
@@ -22,7 +22,7 @@ export const Navbar = () => {
 
                         <div className="flex items-center space-x-2">
                             <NavLink
-                                to="/"
+                                to="/postList"
                                 className={({ isActive }) =>
                                     `${baseClasses} ${isActive ? activeClasses : ""}`
                                 }
@@ -37,8 +37,8 @@ export const Navbar = () => {
                                     `${baseClasses} ${isActive ? activeClasses : ""}`
                                 }
                             >
-                                <LogOut className="w-4 h-4" />
-                                <span className="hidden sm:inline">Logout</span>
+                                <LogIn className="w-4 h-4" />
+                                <span className="hidden sm:inline">Login</span>
                             </NavLink>
                         </div>
                     </div>

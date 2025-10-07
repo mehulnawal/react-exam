@@ -3,27 +3,21 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:3000/users";
 
-// Async thunk for login (save user)
 export const loginUser = createAsyncThunk(
     "users/loginUser",
     async ({ email, password }, { rejectWithValue }) => {
-        if (!email || !password) {
-            return rejectWithValue("Please fill in all fields");
+        try {
+            if (!email || !password) {
+                return rejectWithValue("Please fill in all fields");
+            }
+
+            const newUser = { email, password };
+            const response = await axios.post(BASE_URL, newUser);
+
+            return response.data;
+        } catch (err) {
+            return rejectWithValue("Failed to save user data");
         }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return rejectWithValue("Invalid email format");
-        }
-
-        const existing = await axios.get(`${BASE_URL}?email=${email}`);
-        if (existing.data.length > 0) {
-            return rejectWithValue("User already exists!");
-        }
-
-        const response = await axios.post(BASE_URL, { email, password });
-        return response.data;
-
     }
 );
 

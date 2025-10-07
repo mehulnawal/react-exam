@@ -1,23 +1,21 @@
-import { BrowserRouter, Route, Routes } from "react-router"
-import { Navbar } from "./Components/Navbar"
-import { PostList } from "./Components/PostList"
-import { AddPostForm } from "./AddPost"
-import { Login } from "./Components/Login"
+// App.jsx or wherever you define routes
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { PostList } from "./Components/PostList";
+import { ProtectedRoute } from "./ProtectedRoute";
+import { Login } from "./Components/Login";
+import { Navbar } from "./Components/Navbar";
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Route path="postList" element={<PostList />} />
-            <Route path="/" element={<Login />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navbar />} >
+          <Route index element={<Login />} />
+          <Route path="/postList" element={<PostList />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
